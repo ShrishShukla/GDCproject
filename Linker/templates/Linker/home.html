@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Linkler-Expertise Delivered</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	
+	<style>
+		
+		@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+html, body{
+	height: 100%;
+	width: 100%;
+	font-family: 'Poppins', sans-serif;
+	color: #222;
+
+}
+
+.navbar{
+	padding: .8rem;
+}
+
+.navbar-nav li {
+	padding-right: 20px;
+}
+
+.nav-link {
+	font-size: 1.1em !important;
+
+}
+
+.carousel-inner img {
+	width: 100%;
+	height: 100%;
+}
+
+.carousel-caption {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+
+}
+
+.carousel-caption h1 {
+	font-size: 500%;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 1px #000;
+}
+
+
+.carousel-caption h3 {
+	font-size: 200%;
+	font-weight: 500;
+	text-shadow: 1px 1px 1px 10px #000;
+	padding-bottom: 1rem;
+
+}
+
+
+.btn-primary {
+	background-color: #6648b1;
+	border: 1px solid #6648b1;
+}
+
+.btn-primary hover {
+	background-color: #563d7c;
+	border: 1px solid #563d7c;
+}
+
+.jumbotron {
+	padding: 1rem;
+	border-radius: 0;
+}
+
+.padding {
+	padding-bottom: 2rem;
+}
+
+.welcome {
+	width: 75%;
+	margin: 0 auto;
+	padding-top: 2 rem;
+
+}
+
+.welcome hr {
+	border-top: 2px soolid #b4b4b4;
+	width: 95% ;
+	margin-top: 3rem;
+	margin-bottom: 1rem;
+
+}
+
+
+.fa-code {
+	color: #e54d26;
+
+}
+
+.fa-microchip {
+	color: #563d7c;
+}
+
+
+.fa-home {
+	color: #2163af;
+}
+
+.fa-code, .fa-microchip, .fa-home {
+	font-size: 4em;
+	margin: 1rem;
+}
+
+.fun {
+	width: 100%;
+	margin-bottom: 2rem;
+
+}
+
+.gif {
+	max-width: 100%;
+
+}
+
+.social a {
+	font-size: 4.5em;
+	padding: 3rem;
+
+}
+
+.fa-facebook {
+  color: #3b5998;
+}
+.fa-twitter {
+  color: #00aced;
+}
+.fa-google-plus-g {
+  color: #dd4b39;
+}
+.fa-instagram {
+  color: #517fa4;
+}
+.fa-youtube {
+  color: #bb0000;
+}
+.fa-facebook:hover, 
+.fa-twitter:hover, 
+.fa-google-plus-g:hover, 
+.fa-instagram:hover, 
+.fa-youtube:hover {
+  color: #d5d5d5;
+}
+footer {
+  background-color: #3f3f3f;
+  color: #d5d5d5;
+  padding-top: 2rem;
+}
+hr.light {
+  border-top: 1px solid #d5d5d5;
+  width: 75%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+}
+footer a {
+  color: #d5d5d5;
+}
+hr.light-100 {
+  border-top: 1px solid #d5d5d5;
+  width: 100%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+}
+/*---Media Queries --*/
+@media (max-width: 992px) {
+	.social a {
+		font-size: 4em;
+		padding: 2rem;
+	}
+  }
+@media (max-width: 768px) {
+  .carousel-caption {
+	
+	top: 45%;
+	
+
+}
+
+.carousel-caption h1 {
+	font-size: 350%;
+	padding: 8px 14px;
+
+}
+
+
+.carousel-caption h3 {
+	font-size: 140%;
+	font-weight: 400;
+	
+	padding-bottom: .2rem;
+
+}
+
+.carousel-caption .btn{
+	font-size: 95%;
+	padding: 8px 14px;
+}
+
+.display-4 {
+	font-size: 200%;
+}
+.social a {
+		font-size: 2.5em;
+		padding: 1.2rem;
+	}
+
+
+}
+@media (max-width: 576px) {
+   .carousel-caption {
+	
+	top: 40%;
+	
+
+}
+
+.carousel-caption h1 {
+	font-size: 250%;
+	
+
+}
+
+
+.carousel-caption h3 {
+	font-size: 110%;
+	
+
+}
+
+.carousel-caption .btn{
+	font-size: 90%;
+	padding: 4px 8px;
+}
+
+
+
+
+.display-4 {
+	font-size: 160%;
+}
+.social a {
+		font-size: 2em;
+		padding: .7rem;
+	}
+
+}
+
+
+
+/*---Firefox Bug Fix --*/
+.carousel-item {
+  transition: -webkit-transform 0.4s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+/*--- Fixed Background Image --*/
+figure {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  margin: 0!important;
+}
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#fixed { 
+  background-image: url("{% static "Linker/img/mac.png" %}");
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+    padding: 1rem;
+}
+
+
+
+
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+
+
+
+
+
+
+
+
+
+	</style>
+
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+<div class="container-fluid">
+	<a class="navbar-brand" href="#"><!--<img src="{% static '#'  %}">--><i>Linkler</i></a>
+
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					{% if user.is_authenticated == False %}
+					<a class="nav-link" href="{% url 'login' %}">Login
+					</a>
+					{% endif %}
+					{% if user.is_authenticated == True %}
+					<a class="nav-link" href="{% url 'logout' %}">Logout
+					</a>
+					{% endif %}
+					
+				</li>
+				
+				<li class="nav-item">
+					<a class="nav-link" href="{% url 'site-dash' %}">Dashboard
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{% url 'sensorlist' %}">DaTa_table
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#connect">Connect
+					</a>
+				</li>
+				
+				
+				
+
+		</div>
+</div>
+</nav>
+
+<!--- Image Slider -->
+<div id="slides" class="carousel slide" data-ride="carousel">
+	
+	<ul class="carousel-indicators">
+		<li data-target="#slides" data-slide-to="0" class="active"></li>
+		<li data-target="#slides" data-slide-to="1" ></li>
+		<li data-target="#slides" data-slide-to="2" ></li>
+	</ul>
+
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+			<img src="{% static 'Linker/img/water.jpg' %}" width=100% >
+			<div class="carousel-caption">
+				<h1 class="display-2"><i style="color: white"><em style="border-color: black;">Linkler</em></i></h1>
+				<h3><em>Expertise Delivered</em></h3>
+				<button type="button" class="btn btn-outline-light btn-lg"> view</button>
+
+				<button type="button" class="btn btn-primary btn-lg"> start</button>
+
+			</div>
+		</div>	
+		<div class="carousel-item">
+			<img src="{% static 'Linker/img/water2.jpg' %}" width=100%>
+		</div>
+		<div class="carousel-item">
+			<img src="{% static 'Linker/img/water3.jpg' %}" width=100%>
+		</div>	
+	</div>
+
+</div>
+
+<!--- Jumbotron -->
+<div class="container-fluid">
+	<div class="row jumbotron">
+		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+			<p class="lead">Customer requirements addressed:<br>
+			 1. Access to electrical data and switch control.<br> 2. Monitored usage and alert response system based on data analytics. <br>3. Analysis of consumption levels in energy meter and it’s automated reporting</p>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+			<a href="#"><button type="button" class="btn btn-outline-secondary btn-lg"> Explore</button></a>
+		</div>
+	</div>
+</div>
+
+<!--- Welcome Section -->
+<div class="container-fluid padding">
+	<div class="row welcome text-center">
+		<div class="col-12">
+			<h1 class="display-4"> built with ease</h1>
+		</div>
+		<hr>
+		<div class="col-12">
+			<p class="lead">The project’s objective being an efficient water management system our project integrates IOT (working with protocols such as MQTT or CoAP) for complete control and monitoring and machine learning based predictions to counter electrical wastage. The design and various sensor integration are fundamental add-ons as a Minimum viable proposition (M.V.P) of the product .</p>
+		</div>
+		
+	</div>
+</div>
+
+<!--- Three Column Section -->
+<div class="container-fluid padding">
+	<div class="row text-center padding">
+		<div class="col-xs-12 col-sm-6 col-md-4">
+			<i class="fas fa-code"></i>
+			<h3>CODE</h3>
+			<p>easily built for all-time</p>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-4">
+			<i class="fas fa-microchip"></i>
+			<h3>Microcontroller</h3>
+			<p>easily built for adaptibilty</p>
+		</div>
+		<div class="col-sm-12 col-md-4">
+			<i class="fa fa-home"></i>
+			<h3>css3</h3>
+			<p>easily built for smart-homes</p>
+		</div>
+
+	</div>
+	<hr class="my-4">
+</div>
+
+<!--- Two Column Section -->
+<div class="container-fluid padding">
+	<div class="row padding">
+		<div class="col-lg-6">
+			<h2>Technical aspect...</h2>
+			<p>There would be sensors for checking power flow, power quality index and power management. The data collected from these sensors will be used to feed an ML model for water usage predictions and statistics. For this purpose we will use a network where the sensors will act as Z-End devices.</p>
+			<p> The data collected from these sensors will be sent to Zcoordinator which is connected to nodemcu black wireless. These Beagle board will send the data to a database server using TCP/IP protocol. 
+				
+			</p>
+			<p>The data from database will be fed into ML model for optimum usage</p>
+			<br>
+			<a href="#" class="btn btn-primary">learn more</a>
+		</div>
+		<div class="col-lg-6">
+			<img src="{% static 'Linker/img/water.jpg' %}" class="img-fluid">
+		</div>
+	</div>
+</div>
+<hr class="my-4">
+<!--- Fixed background -->
+<figure>
+	<div class="fixed-wrap">
+		<div id="fixed">
+			
+		</div>
+	</div>
+</figure>
+
+
+<!--- Emoji Section -->
+<button class="fun" data-toggle="collapse" data-target="#emoji">click for fun</button>
+<div id="emoji" class="collapse">
+	<div class="container-fluid padding">
+		<div class="row text-center">
+			<div class="col-sm-6 col-md-3">
+				<img class="gif" src="{% static 'Linker/img/gif/panda.gif' %}">
+			</div>
+
+			<div class="col-sm-6 col-md-3">
+				<img class="gif" src="{% static 'Linker/img/gif/poo.gif' %}">
+			</div>
+			<div class="col-sm-6 col-md-3">
+				<img class="gif" src="{% static 'Linker/img/gif/unicorn.gif' %}">
+			</div>
+			<div class="col-sm-6 col-md-3">
+				<img class="gif" src="{% static 'Linker/img/gif/chicken.gif' %}">
+			</div>
+
+		</div>
+	</div>
+</div>
+<!--- Meet the team -->
+<div class="container-fluid padding">
+	<div class="row welcome text-center">
+		<div class="col-12">
+			<h1 class="display-4">Meet the team</h1>
+		</div>
+		<hr>
+
+	</div>
+</div>
+
+<!--- Cards -->
+<div class="container-fluid padding">
+	<div class="row padding">
+		<div class="col-md-4">
+			<div class="card">
+				<img class="card-img-top" src="{% static 'Linker/img/water2.jpg' %}">
+				<div class="card-body">
+					<h1 class="card-title">shrish</h1>
+					<p class="card-text">WEB DEVELOPER</p>
+					<a href="#" class="btn btn-outline-secondary"> see profile</a>
+				</div>
+			</div>
+			
+		</div>
+		<div class="col-md-4">
+			<div class="card">
+				<img class="card-img-top" src="{% static 'Linker/img/water2.jpg' %}">
+				<div class="card-body">
+					<h1 class="card-title">vacant</h1>
+					<p class="card-text">OPERATIONS</p>
+					<a href="#" class="btn btn-outline-secondary"> see profile</a>
+				</div>
+			</div>
+			
+		</div>
+		<div class="col-md-4">
+			<div class="card">
+				<img class="card-img-top" src="{% static 'Linker/img/water2.jpg' %}">
+				<div class="card-body">
+					<h1 class="card-title">manish</h1>
+					<p class="card-text">TECHNICAL DEVELOPER</p>
+					<a href="#" class="btn btn-outline-secondary"> see profile</a>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+
+<!--- Two Column Section -->
+<div class="container-fluid padding">
+	<div class="row padding">
+		<div class="col-lg-6">
+			<h2>Selling plan</h2>
+			<p>Selling plan: Corporates, differential pricing, emails, social media Since we have already mentioned the advantages and disadvantages in the above 4 P’s it is pretty obvious that the main buyers of such a service are people with deep pockets.  </p>
+			<p>Hence, we shall market it using digital marketing means like targeted e-mails to potential clients, broadcasting about the product in social media and making personal one on one pitches with corporates and major business entities that are looking at new or under construction project in the above mentioned cities. 
+				
+			</p>
+			<p>The first demonstration of electric light in India was conducted in Kolkata (then Calcutta) mid-1879 during British colonization of the sub-continent. A few decades later, the success of the demo was extended to Mumbai (then Bombay) to set up a generating station to power a tramway in 1905. Over the century, hydroelectric installations were set up in Darjeeling tea estates, street lights were lit in Bangalore and the first electric train ran between Bombay’s Victoria Terminus and Kurla. In 2015, Cochin International Airport became the world’s first fully solar powered airport with a dedicated solar plant. </p>
+			
+		</div>
+		<div class="col-lg-6">
+			<img src="{% static 'Linker/img/sale.jpg' %}" class="img-fluid">
+		</div>
+	</div>
+</div>
+<hr class="my-4">
+
+<!--- Connect -->
+<div class="container-fluid padding">
+	<div class="row text-center padding">
+		<div class="col-12">
+			<div id="connect"><h2>CONNECT</h2></div>
+		</div>
+		<div class="col-12 social padding">
+			<a href="#"><i class="fab fa-facebook"></i></a>
+			<a href="#"><i class="fab fa-twitter"></i></a>
+			<a href="#"><i class="fab fa-instagram"></i></a>
+			<a href="#"><i class="fab fa-youtube"></i></a>
+		</div>
+	</div>
+</div>
+
+<!--- Footer -->
+<footer>
+	<div class="container-fluid padding">
+		<div class="row text-center">
+			<div class="col-md-4">
+				<img src="{% static 'Linker/img/linkler.png' %}" width="100px" height="100px">
+				<hr class="light">
+				<p>team no LinkerX123</p>
+				<p> National Institute of Technology, Andhra Pradesh </p>
+				<p>TADEPALLIGUDEM</p>
+				<p>MVP</p>
+			</div>
+			<div class="col-md-4">
+				<hr class="light">
+				<h5>Our hours</h5>
+				<hr class="light">
+				<p>Monday: 9am to 5pm</p>
+				<p>Saturday: 10am to 4pm</p>
+				<p>Sunday: Closed</p>
+			</div>
+			<div class="col-md-4">
+				<hr class="light">
+				<h5>Service Area</h5>
+				<hr class="light">
+				<p>water solution</p>
+				<p>for community & home</p>
+				<p>marketable</p>
+				<p>Reasonable pricing </p>
+			</div>
+			<div class="col-12">
+				<hr class="light-100">
+				<!--<h5>&copy; Django implementation</h5>-->
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
